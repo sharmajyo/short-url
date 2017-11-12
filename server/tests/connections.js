@@ -1,12 +1,12 @@
 //During the test the env variable is set to test
 process.env.NODE_ENV = 'test';
-var {url} = require('../models');
-var app = require('../../app');
-var http = require('http');
+const {url} = require('../models');
+const app = require('../../app');
+const http = require('http');
 
-var apiServer;
+let apiServer;
 
-var connection = {
+const connection = {
   connectDb: (port, next) => {
     apiServer = http.createServer(app);
     apiServer.listen(port);

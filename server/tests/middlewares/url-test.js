@@ -1,7 +1,7 @@
 const should = require('should');
 const url = require('../../middlewares/url');
 const {connectDb, closeConnection} = require("../connections");
-var PORT = 3434;
+const PORT = 3434;
 
 let req = {};
 let res = {};

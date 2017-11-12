@@ -1,11 +1,11 @@
-var utils = {};
-var alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
-var base = alphabet.length;
+const utils = {};
+const alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
+const base = alphabet.length;
 
 utils.encode = (num) => {
-  var encoded = '';
+  let encoded = '';
   while (num){
-    var remainder = num % base;
+    const remainder = num % base;
     num = Math.floor(num / base);
     encoded = alphabet[remainder].toString() + encoded;
   }
@@ -13,10 +13,10 @@ utils.encode = (num) => {
 }
 
 utils.decode = (str) => {
-  var decoded = 0;
+  let decoded = 0;
   while (str){
-    var index = alphabet.indexOf(str[0]);
-    var power = str.length - 1;
+    const index = alphabet.indexOf(str[0]);
+    const power = str.length - 1;
     decoded += index * (Math.pow(base, power));
     str = str.substring(1);
   }
