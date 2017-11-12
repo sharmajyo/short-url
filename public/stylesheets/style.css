@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  background-color: #6fa9f6;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.short-url {
+  color: #f8f6f3;
+}
+
+.header {
+  color: #f0e7e7;
+  padding: 0 30px;
+  width: 100%;
+  border-bottom: 1px solid #c7c8c9;
+}
+
+.url-container {
+  text-align: center;
+  margin-top: 150px;
+  height: 80%;
+}
+
+.url-input {
+  width: 400px;
+  padding: 10px;
+}
+
+.short-btn {
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #ea9b47;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.error {
+  color: #b80707;
+  font-size: 12px;
+}
+
+.short-url-container {
+  display: none;
+}
