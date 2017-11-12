@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body= body
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script.
+      getShortUrl = () => {
+        $(".error").text();
+        $(".short-url-container").hide();
+        url = $(".url-input").val();
+
+        if(!url) {
+          $(".error").text('enter valid url and retry');
+        }
+        else {
+          $.ajax({
+            method: 'post',
+            data: {url},
+            url: "/api/shortUrl",
+            success: (result) => {
+              $(".short-url").text(result.shortUrl);
+              $(".short-url-container").show();
+            },
+            error: (error) => {
+              $(".error").text(error.responseText);
+            }
+          });
+        }
+      }
+
+    .header
+      h2 short url
+    .url-container
+      input.url-input(type='text' placeholder='enter url')
+      button.short-btn(onclick='getShortUrl()') shortify!
+      p.error
+      .short-url-container
+        span your new url is :
+        span.short-url

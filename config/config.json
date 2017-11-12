@@ -1,0 +1,18 @@
+{
+  "development": {
+    "username": "short_url",
+    "password": "short_url",
+    "database": "short_url_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "appUrl": "localhost:3000/"
+  },
+  "test": {
+    "username": "short_url",
+    "password": "short_url",
+    "database": "short_url_test_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "appUrl": "localhost:3000/"
+  }
+}
