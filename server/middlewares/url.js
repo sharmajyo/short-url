@@ -8,7 +8,7 @@ const getAllUrlsMw = (req, res, next) => {
       req.urls = urls;
       next();
     })
-    .catch((e) => {
+    .catch(() => {
       res.render('error', {message: 'error in fetching records'});
     });
 }
@@ -22,7 +22,7 @@ const getUrlMw = (req, res, next) => {
       req.url = url;
       next();
     })
-    .catch((e) => {
+    .catch(() => {
       res.render('error', {message: 'error in fetching record'});
     });
 }
@@ -36,7 +36,7 @@ const createUrlMw = (req, res, next) => {
       req.url = url;
       next();
     })
-    .catch((e) => {
+    .catch(() => {
       res.render('error', {message: 'error in saving record'});
     });
 }
